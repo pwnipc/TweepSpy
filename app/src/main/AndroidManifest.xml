@@ -11,13 +11,19 @@
         android:theme="@style/Theme.TweepSpy">
         <activity
             android:name=".CveDeetsActivity"
-            android:exported="false" />
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chalie.tweepspy.TweepSpyList">
+            </meta-data>
+        </activity>
         <activity
             android:name=".TweepSpyList"
             android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.chalie.tweepspy.MainActivity"></meta-data>
+                android:value="com.chalie.tweepspy.MainActivity">
+            </meta-data>
         </activity>
         <activity
             android:name=".SplashScreenActivity"
