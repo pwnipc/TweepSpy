@@ -38,7 +38,7 @@ public class TweepSpyList extends AppCompatActivity {
         mListViewCves.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String tweetedCve = ((TextView)view).getText().toString();
+                String tweetedCve = tweetedCves[position];
                 String affectedProduct = product[position];
                 String description = cveInfo[position];
                 Toast.makeText(TweepSpyList.this,"Loading "+tweetedCve,Toast.LENGTH_LONG).show();
