@@ -13,6 +13,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.buttonLogin) Button mLogin;
+    @BindView(R.id.editTextUserName) EditText mEditTextUserName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == mLogin){
-            Toast.makeText(MainActivity.this, "Logging in...", Toast.LENGTH_LONG).show();
+            String username = mEditTextUserName.getText().toString();
+            Toast.makeText(MainActivity.this, username, Toast.LENGTH_LONG).show();
         }
 
     }
