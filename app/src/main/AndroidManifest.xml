@@ -10,12 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TweepSpy">
         <activity
+            android:name=".CveDeetsActivity"
+            android:exported="false" />
+        <activity
             android:name=".TweepSpyList"
             android:exported="false">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.chalie.tweepspy.MainActivity">
-        </meta-data>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.chalie.tweepspy.MainActivity"></meta-data>
         </activity>
         <activity
             android:name=".SplashScreenActivity"
@@ -30,8 +32,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/MainTheme">
-        </activity>
+            android:theme="@style/MainTheme"></activity>
     </application>
 
 </manifest>
