@@ -41,7 +41,12 @@ public class TweepSpyList extends AppCompatActivity {
                 String tweetedCve = ((TextView)view).getText().toString();
                 String affectedProduct = product[position];
                 String description = cveInfo[position];
-                Toast.makeText(TweepSpyList.this,affectedProduct,Toast.LENGTH_LONG).show();
+                Toast.makeText(TweepSpyList.this,"Loading "+tweetedCve,Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(TweepSpyList.this,CveDeetsActivity.class);
+                intent.putExtra("tweetedCve",tweetedCve);
+                intent.putExtra("affectedProduct",affectedProduct);
+                intent.putExtra("description",description);
+                startActivity(intent);
             }
         });
 
