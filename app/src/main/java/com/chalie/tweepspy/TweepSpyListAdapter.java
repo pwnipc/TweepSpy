@@ -20,7 +20,7 @@ public class TweepSpyListAdapter extends ArrayAdapter {
         String tweetedCve = mTweetedCves[position];
         String product = mProduct[position];
         String cveInfo = mCveInfo[position];
-        return String.format("CVE ID : %s \n -> Affected Vendor : %S", tweetedCve, product);
+        return String.format("CVE ID : %s \nAffected Product : %S", tweetedCve, product);
     }
 
 
