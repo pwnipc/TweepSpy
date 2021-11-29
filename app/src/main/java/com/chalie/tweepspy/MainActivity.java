@@ -1,12 +1,13 @@
 package com.chalie.tweepspy;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,7 +28,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == mLogin){
             String username = mEditTextUserName.getText().toString();
-            Toast.makeText(MainActivity.this, username, Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(MainActivity.this, TweepSpyList.class);
+            intent.putExtra("username",username);
+            startActivity(intent);
+            Toast.makeText(MainActivity.this, "Please wait...", Toast.LENGTH_SHORT).show();
         }
 
     }
