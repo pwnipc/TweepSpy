@@ -1,5 +1,6 @@
 package com.chalie.tweepspy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -16,6 +17,9 @@ public class TweepSpyList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tweep_spy_list);
         ButterKnife.bind(this);
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("username");
+        mTextViewUserName.setText(username);
 
     }
 }
