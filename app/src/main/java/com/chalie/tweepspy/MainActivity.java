@@ -28,10 +28,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == mLogin){
             String username = mEditTextUserName.getText().toString();
-            Intent intent = new Intent(MainActivity.this, TweepSpyList.class);
-            intent.putExtra("username",username);
-            startActivity(intent);
-            Toast.makeText(MainActivity.this, "Please wait...", Toast.LENGTH_SHORT).show();
+            if (username.isEmpty()){
+                Toast.makeText(MainActivity.this, "Invalid Username", Toast.LENGTH_SHORT).show();
+            }else{
+                Intent intent = new Intent(MainActivity.this, TweepSpyList.class);
+                intent.putExtra("username",username);
+                startActivity(intent);
+                Toast.makeText(MainActivity.this, "Please wait...", Toast.LENGTH_SHORT).show();
+            }
+
         }
 
     }
